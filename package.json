@@ -1,0 +1,36 @@
+{
+  "name": "tweeter-project",
+  "version": "1.0.0",
+  "description": "Tweeter is a simple, single-page Twitter clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhii12/Tweeter-Project.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "html",
+    "css3",
+    "flexbox"
+  ],
+  "author": "Serhii Panchyshyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serhii12/Tweeter-Project/issues"
+  },
+  "homepage": "https://github.com/serhii12/Tweeter-Project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chance": "^1.0.16",
+    "express": "^4.16.4",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  }
+}
