@@ -1,17 +1,14 @@
-.header {
-  &__nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.6rem 0;
-    height: 5rem;
-    width: 100%;
-    position: fixed;
-    background: rgb(191, 102, 199);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
-  }
-  &__nav__logo {
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background: rgb(191, 102, 199);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,3 +29,4 @@
     }
   }
 }
+

@@ -29,5 +29,6 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  @include fontSize(18);
+  color: #244751;
+  background-color: #eee;
 }

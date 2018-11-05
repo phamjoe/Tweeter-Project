@@ -13,24 +13,27 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="header__nav">
-      <div class="header__nav__logo">
-        <span class="main-logo">
-          <i class="zmdi zmdi-twitter"></i>
-        </span>
-        <p>Tweeter</p>
-      </div>
-      <button class="btn fill">
-        <i class="fas fa-edit"></i> Tweet
-      </button>
-    </nav>
-  </header>
+  <nav class="navigation">
+    <div class="navigation__logo">
+      <span class="main-logo"><i class="zmdi zmdi-twitter"></i></span>
+      <p>Tweeter</p>
+    </div>
+    <div>
+      <button class="btn fill"><i class="fas fa-edit"></i> Tweet</button>
+    </div>
+  </nav>
 
-  <!-- Page-specific (main) content here -->
-  <main class="wrapper">
-
-
+  <main class="main">
+    <section class="new__tweet">
+      <h2 class="new__tweet__text">Compose Tweet</h2>
+      <form action="/tweets" class="new__tweet__form" method="post">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <div class="new__tweet__form__action">
+          <input class="btn-send" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </div>
+      </form>
+    </section>
   </main>
 
   <!-- External JS -->
