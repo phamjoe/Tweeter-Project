@@ -27,7 +27,7 @@
     <section class="new__tweet">
       <h2 class="new__tweet__text">Compose Tweet</h2>
       <form action="/tweets" class="new__tweet__form" method="post">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <textarea class="js-text" name="text" placeholder="What are you humming about?"></textarea>
         <div class="new__tweet__form__action">
           <input class="btn-send" type="submit" value="Tweet">
           <span class="counter">140</span>
@@ -41,6 +41,7 @@
     crossorigin="anonymous"></script>
   <!-- App JS -->
   <script src="javascript/app.js"></script>
+  <script src="javascript/composer-char-counter.js"></script>
 </body>
 
 </html>

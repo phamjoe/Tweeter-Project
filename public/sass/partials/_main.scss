@@ -7,8 +7,8 @@
   background-color: white;
   padding: 4rem 2rem;
   .new__tweet {
-    margin-top: 40px;
-    border: 0.5px solid lightgray;
+    margin-top: 4rem;
+    border: 1px solid lightgray;
     padding: 0 1rem 0 1rem;
     border-radius: 10px;
     background-color: #eee;
@@ -29,8 +29,7 @@
         padding: .3rem 0.3rem;
       }
       &__action {
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
+        padding: 0.7rem 0 0.7rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;

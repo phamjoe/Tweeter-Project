@@ -316,6 +316,10 @@ ul {
   top: 0;
 }
 
+.text-msg {
+  color: red;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,8 +389,8 @@ ul {
 }
 
 .main .new__tweet {
-  margin-top: 40px;
-  border: 0.5px solid lightgray;
+  margin-top: 4rem;
+  border: 1px solid lightgray;
   padding: 0 1rem 0 1rem;
   border-radius: 10px;
   background-color: #eee;
@@ -431,8 +435,7 @@ ul {
 }
 
 .main .new__tweet__form__action {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding: 0.7rem 0 0.7rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
