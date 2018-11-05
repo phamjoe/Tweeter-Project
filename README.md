@@ -13,5 +13,6 @@ The app is fully responsive and accessible across devices front end technologies
 
 ## Getting Started
 
-- Install all dependencies (using the `npm install` command).
-- Run the development web server the `npm start` command.
+1. Install dependencies using the `npm install` command.
+2. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Go to <http://localhost:8080/> in your browser.

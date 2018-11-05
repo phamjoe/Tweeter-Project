@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tweeter - Home Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <div class="header__nav__logo">
+        <a class="main-logo" href="#">
+          <img class="logo" src="/images/photos/bird.png" alt="Tweeter logo">
+        </a>
+        <span>Tweeter</span>
+      </div>
+      <ul class="header__nav__menu">
+        <li class="header__nav__menu__item">
+          <a href="#" class="header__nav__menu__link">Pricing</a>
+        </li>
+        <li class="header__nav__menu__item">
+          <a href="/login" class="header__nav__menu__link">Login</a>
+        </li>
+        <li class="header__nav__menu__item">
+          <a href="/register" class="header__nav__menu__link btn-header btn fill">Get Started</a>
+        </li>
+      </ul>
+      <input id="nav" style="display:none" type="checkbox">
+      <label class="header__nav__hamburger--label" for="nav">
+        <i class="fas fa-bars header__nav__hamburger"></i>
+      </label>
+      <div class="mobile__nav">
+        <ul>
+          <li class="mobile__nav__item mobile__nav__close">
+            <label for="nav">X</label>
+          </li>
+          <li>
+            <a class="mobile__nav__item" href="#">Pricing</a>
+          </li>
+          <li>
+            <a class="mobile__nav__item" href="/login">Login</a>
+          </li>
+          <li>
+            <a class="mobile__nav__item" href="/register">Get started</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="wrapper">
+  </main>
+
+
+
+
+
+
+
+  <!-- External JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- App JS -->
+  <script src="javascript/app.js"></script>
+</body>
+
+</html>
