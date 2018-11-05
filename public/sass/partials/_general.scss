@@ -6,6 +6,7 @@ img {
 
 a {
   color: $black;
+  text-decoration: none;
 }
 
 ul {
@@ -15,41 +16,43 @@ ul {
 }
 
 .btn {
-  border-radius: 30px;
-  padding: 11px 25px;
-  z-index: 3;
+  display: block;
+  height: 45px;
+  width: 150px;
+  padding: 10px 5px;
+  font-weight: 700;
+  @include fontSize(15);
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
 }
 
-.btn-heading {
-  display: block;
-  transition: 0.08s ease-in;
-  margin: 10px 7px;
-  padding: 15px 30px;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border-radius: 25px;
-  text-transform: uppercase;
-  z-index: 1;
-  cursor: pointer;
-  color: $white;
-  background-color: $purple;
-  position: relative;
+.fill:hover {
+  color: whitesmoke;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #383736;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.09s ease-in;
+}
+
+.fill:hover:before {
+  top: 0;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.userLogin {
-  list-style: none;
-  color: rgb(28, 241, 28);
-  margin-right: 10px;
-  padding-top: 20px;
-}
-
-.btn-table {
-  background-color: $purple;
 }
