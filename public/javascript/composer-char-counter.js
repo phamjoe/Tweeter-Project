@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  console.log('Ready to go!');
   $('textarea').on('input', function() {
     const elementLength = $(this).val().length;
     const counter = $(this)
