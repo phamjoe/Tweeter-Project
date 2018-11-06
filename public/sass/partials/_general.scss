@@ -68,5 +68,6 @@ h2 {
   border-radius: 10px;
   padding: 10px 15px;
   margin-bottom: 1rem;
+  @include fontSize(12);
   text-align: center;
 }

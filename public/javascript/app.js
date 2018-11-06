@@ -1,5 +1,19 @@
 $(document).ready(() => {
+  // get DOM elements
+  const myForm = $('.new__tweet__form');
+  const newTweetSection = myForm.parent();
+  const formText = myForm.children('textarea');
+  const counter = myForm.find('.counter');
+  const errorMsg = myForm.parent().find('#error');
   const tweets = document.querySelector('.tweets-wrapper');
+  const composeTweet = $('.btn');
+
+  // Toggle form display
+  composeTweet.click(() => {
+    newTweetSection.slideToggle();
+    // when the page loads focus on the input field
+    formText.focus();
+  });
 
   function calcDateDiff(date) {
     const today = new Date();
@@ -7,6 +21,12 @@ $(document).ready(() => {
     const timeDiff = Math.abs(today.getTime() - givenDate.getTime());
     return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
   }
+
+  const escape = str => {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const generateHTML = tweet => `
     <article class="tweets__new">
@@ -19,7 +39,7 @@ $(document).ready(() => {
       </header>
       <main class="tweets__new__mn">
         <p>
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
         </p>
       </main>
       <footer class="tweets__new__ft">
@@ -46,11 +66,7 @@ $(document).ready(() => {
     });
   };
   loadTweets();
-  // get DOM elements
-  const myForm = $('.new__tweet__form');
-  const formText = myForm.children('textarea');
-  const counter = myForm.find('.counter');
-  const errorMsg = myForm.parent().find('#error');
+
   // add EventListener on submission
   myForm.submit(function(e) {
     // prevent default submission of the form
@@ -63,12 +79,14 @@ $(document).ready(() => {
         type: 'post',
         url: '/tweets',
         data: serializeData,
+      }).then(result => {
+        // Reset the form
+        formText.val('');
+        counter.html(140);
+        loadTweets();
       });
-      // Reset the form
-      formText.val('');
-      counter.html(140);
     } else {
-      errorMsg.show();
+      errorMsg.slideDown();
     }
   });
 });
