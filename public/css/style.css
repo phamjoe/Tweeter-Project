@@ -466,6 +466,14 @@ h2 {
   display: block;
 }
 
+.tweets-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
 .tweets__new {
   display: -webkit-box;
   display: -ms-flexbox;
