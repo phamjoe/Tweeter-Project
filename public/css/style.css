@@ -379,12 +379,10 @@ ul {
 }
 
 .main {
-  border-radius: 4px;
-  padding-right: 2em;
-  padding-left: 2em;
   width: 450px;
   margin: 0 auto;
   background-color: white;
+  border: 5px solid salmon;
   padding: 4rem 2rem;
 }
 
@@ -449,5 +447,91 @@ ul {
 
 .main .new__tweet__form__action .btn-send {
   display: block;
+}
+
+.tweets-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tweets__new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.tweets__new__hd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: mediumslateblue;
+  border-radius: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.tweets__new__hd__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.tweets__new__hd__wrap img {
+  width: 56px;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.tweets__new__hd h2 {
+  font-weight: bold;
+}
+
+.tweets__new__hd p {
+  font-style: italic;
+}
+
+.tweets__new__mn {
+  padding: 0 1rem 0 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.tweets__new__ft {
+  padding: 0 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tweets__new__ft .icons > i {
+  color: #38550d;
 }
 /*# sourceMappingURL=style.css.map */

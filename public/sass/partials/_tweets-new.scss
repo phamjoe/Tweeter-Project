@@ -1,0 +1,50 @@
+.tweets-wrapper {
+  display: flex;
+}
+
+.tweets__new{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  &__hd {
+    display: flex;
+    justify-content: space-between;
+    background-color: mediumslateblue;
+    border-radius: 4px;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    &__wrap {
+      display: flex;
+      justify-content: stretch;
+      img {
+        width: 56px;
+        border-radius: 8px;
+        margin-right: 1rem;
+      } 
+    }
+    h2 {
+      font-weight: bold;
+    }
+    p {
+      font-style: italic;
+    }
+  }
+  &__mn {
+    padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid lightgrey;
+  }
+  &__ft {
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .icons > i {
+      color: rgb(56, 85, 13);
+    }
+  }
+}
