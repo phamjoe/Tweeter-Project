@@ -96,4 +96,28 @@ $(document).ready(() => {
   const html = data.map(generateHTML).join('');
   const tweets = document.querySelector('.tweets-wrapper');
   tweets.innerHTML = html;
+
+  // get DOM elements
+  const myForm = $('.new__tweet__form');
+  const formText = myForm.children('textarea');
+  const errorMsg = $('#error');
+  // add EventListener on submission
+  myForm.submit(function(e) {
+    // prevent default submission of the form
+    e.preventDefault();
+    if (formText.val().trim() !== '') {
+      // Hide errorMSg
+      errorMsg.hide();
+      const serializeData = $(this).serialize();
+      $.ajax({
+        type: 'post',
+        url: '/tweets',
+        data: serializeData,
+      });
+      // Reset the form
+      formText.val('');
+    } else {
+      errorMsg.show();
+    }
+  });
 });

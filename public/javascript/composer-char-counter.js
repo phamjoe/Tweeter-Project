@@ -7,9 +7,9 @@ $(document).ready(() => {
     const btn = $(this)
       .parent()
       .find('.btn-send');
-    const maxLenght = 140;
-    const char = maxLenght - elementLength;
-    if (elementLength >= maxLenght) {
+    const maxLength = 140;
+    const char = maxLength - elementLength;
+    if (elementLength > maxLength) {
       counter.html(`${char} you have reached the limit`).addClass('text-msg');
       btn.prop('disabled', true);
     } else {
