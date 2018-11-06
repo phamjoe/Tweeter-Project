@@ -57,6 +57,13 @@ $(document).ready(() => {
     },
   ];
 
+  function calcDateDiff(date) {
+    const today = new Date();
+    const givenDate = new Date(date);
+    const timeDiff = Math.abs(today.getTime() - givenDate.getTime());
+    return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
+  }
+
   function generateHTML(tweet) {
     return `
     <article class="tweets__new">
@@ -73,7 +80,9 @@ $(document).ready(() => {
         </p>
       </main>
       <footer class="tweets__new__ft">
-        <p>${tweet.created_at}</p>
+        <p>
+        ${calcDateDiff(tweet.created_at)} days ago
+        </p>
         <div class="icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>

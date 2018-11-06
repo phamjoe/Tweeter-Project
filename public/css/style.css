@@ -343,6 +343,7 @@ h2 {
   background: #bf66c7;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  z-index: 2;
 }
 
 .navigation__logo {
@@ -386,7 +387,6 @@ h2 {
   width: 450px;
   margin: 0 auto;
   background-color: white;
-  border: 5px solid salmon;
   padding: 4rem 2rem;
   height: 100%;
 }
