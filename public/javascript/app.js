@@ -8,6 +8,8 @@ $(document).ready(() => {
   const tweets = document.querySelector('.tweets-wrapper');
   const composeTweet = $('.btn');
 
+  // Hide textarea
+  newTweetSection.hide();
   // Toggle form display
   composeTweet.click(() => {
     newTweetSection.slideToggle();
@@ -50,7 +52,10 @@ $(document).ready(() => {
     const month = givenDate.getMonth();
     const year = givenDate.getFullYear();
     const hours = givenDate.getHours();
-    const minutes = givenDate.getMinutes();
+    const minutes =
+      givenDate.getMinutes() < 10
+        ? `0${givenDate.getMinutes()}`
+        : givenDate.getMinutes();
     return `${hours}:${minutes} - ${getMonthName(month)} ${addDaySufix(
       day
     )}, ${year}`;
