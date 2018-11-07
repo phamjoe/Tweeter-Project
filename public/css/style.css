@@ -393,6 +393,7 @@ h2 {
   background: #36688d;
   overflow: hidden;
   top: 0;
+  z-index: 2;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
@@ -452,6 +453,7 @@ h2 {
 }
 
 .main .new__tweet__text {
+  padding-bottom: 1rem;
   border-bottom: 1px solid black;
 }
 
@@ -501,10 +503,6 @@ h2 {
           align-items: center;
 }
 
-.main .new__tweet__form__action .counter {
-  color: #171717;
-}
-
 .main .new__tweet__form__action .btn-send {
   display: block;
   cursor: pointer;
@@ -532,6 +530,7 @@ h2 {
   padding: 1rem;
   margin-top: 2rem;
   border-radius: 8px;
+  opacity: 0.7;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -605,5 +604,26 @@ h2 {
 
 .tweets__new__ft__stats .likes {
   margin-left: 10px;
+}
+
+.tweets__new__ft__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  color: transparent;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.tweets__new:hover {
+  opacity: 1;
+}
+
+.tweets__new:hover .tweets__new__ft .tweets__new__ft__icons {
+  color: green;
 }
 /*# sourceMappingURL=style.css.map */

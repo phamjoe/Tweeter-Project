@@ -125,7 +125,7 @@ $(document).ready(() => {
         type: 'post',
         url: '/tweets',
         data: serializeData,
-      }).then(result => {
+      }).then(() => {
         // Reset the form
         formText.val('');
         counter.html(140);

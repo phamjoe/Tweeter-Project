@@ -10,6 +10,7 @@
     background-color:rgb(255, 226, 94);
     width: 100%;
     &__text {
+      padding-bottom: 1rem;
       border-bottom: 1px solid black;
     }
     &__form {
@@ -29,9 +30,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .counter {
-          color: $black;
-        }
         .btn-send {
           display: block;
           cursor: pointer;
