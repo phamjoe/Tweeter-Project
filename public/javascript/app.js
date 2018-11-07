@@ -116,7 +116,10 @@ $(document).ready(() => {
       },
     });
   };
-  loadTweets();
+
+  (() => {
+    loadTweets();
+  })();
 
   // add EventListener on submission
   myForm.submit(function(e) {
