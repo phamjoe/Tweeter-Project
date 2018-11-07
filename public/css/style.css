@@ -326,6 +326,8 @@ ul {
   text-align: center;
   cursor: pointer;
   z-index: 1;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   position: relative;
 }
 
@@ -342,8 +344,8 @@ ul {
   right: 0;
   top: 100%;
   z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
-  transition: top 0.09s ease-in;
+  -webkit-transition: top 0.2s ease-in;
+  transition: top 0.2s ease-in;
 }
 
 .fill:hover:before {
@@ -436,9 +438,9 @@ h2 {
 
 .main {
   width: 560px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
   background-color: white;
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 .main .new__tweet {
@@ -499,10 +501,21 @@ h2 {
           align-items: center;
 }
 
+.main .new__tweet__form__action .counter {
+  color: #171717;
+}
+
 .main .new__tweet__form__action .btn-send {
   display: block;
+  cursor: pointer;
   border-radius: 8px;
   padding: 11px 15px;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.main .new__tweet__form__action .btn-send:hover {
+  background-color: #e6e6e6;
 }
 
 .tweets-wrapper {

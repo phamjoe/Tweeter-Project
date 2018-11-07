@@ -33,6 +33,7 @@ ul {
   text-align: center;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.2s ease-in;
   position: relative;
 }
 
@@ -49,7 +50,7 @@ ul {
   right: 0;
   top: 100%;
   z-index: -1;
-  transition: top 0.09s ease-in;
+  transition: top 0.2s ease-in;
 }
 
 .fill:hover:before {

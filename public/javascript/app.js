@@ -30,7 +30,7 @@ $(document).ready(() => {
     'December',
   ];
 
-  const getMonthName = monthNum => monthList[monthNum - 1];
+  const getMonthName = monthNum => monthList[monthNum];
 
   const addDaySufix = dayNum => {
     let sufix = 'th';
