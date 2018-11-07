@@ -32,3 +32,18 @@ body {
   color: #244751;
   background-color: #eee;
 }
+
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h4 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+p {
+  @include fontSize(12);
+}

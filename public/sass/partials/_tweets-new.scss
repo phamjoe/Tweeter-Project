@@ -4,63 +4,53 @@
 }
 
 .tweets__new {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   border: 1px solid black;
-  margin-top: 1rem;
-  opacity: 0.5;
-  transition: opacity 0.5s;
+  padding: 1rem;
+  margin-top: 2rem;
   border-radius: 8px;
+  // opacity: 0.5;
+  transition: opacity 0.5s;
   &__hd {
     display: flex;
-    border-radius: 8px;
-    justify-content: space-between;
-    background-color: $grey;
-    align-items: center;
-    padding: 0 1rem 0 1rem;
-    &__wrap {
+    flex-direction: row;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+    }
+    &__profile-name {
       display: flex;
-      align-items: center;
-      img {
-        width: 55px;
-        border-radius: 10px;
-        margin-right: 1rem;
-      } 
-    }
-    h2 {
-      font-weight: bold;
-    }
-    p {
-      font-style: italic;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+      h3,
+      h4 {
+        display: flex;
+        align-items: center;
+      }
     }
   }
-  &__mn {
-    padding: 0 1rem 0 1rem;
-    border-bottom: 1px solid lightgrey;
+  &__main-content {
     p {
+      margin-bottom: 10px;
       word-wrap: break-word; 
+    }
+    hr {
+      margin: 20px 0;
+      border-style: solid;
+      opacity: 0.1;
     }
   }
   &__ft {
-    border-radius: 8px;
-    padding: 0 1rem 0 1rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-
-    .icons > i {
-      transition: all 1s;
-      display: none;
-      color: rgb(108, 153, 40);
+    &__stats {
+      display: flex;
+      font-size: 15px;
+      .likes {
+        margin-left: 10px;
+      }
     }
-  }
-  &:hover {
-    opacity: 1;
-  }
-  &:hover .icons i {
-    display: inline-block;
   }
 }

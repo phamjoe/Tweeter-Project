@@ -15,12 +15,46 @@ $(document).ready(() => {
     formText.focus();
   });
 
-  function calcDateDiff(date) {
-    const today = new Date();
+  const monthList = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  const getMonthName = monthNum => monthList[monthNum - 1];
+
+  const addDaySufix = dayNum => {
+    let sufix = 'th';
+    if (dayNum === 1 || dayNum === 21 || dayNum === 31) {
+      sufix = 'st';
+    } else if (dayNum === 2 || dayNum === 22) {
+      sufix = 'nd';
+    } else if (dayNum === 3 || dayNum === 23) {
+      sufix = 'rd';
+    }
+    return dayNum + sufix;
+  };
+
+  const talkingCalendar = date => {
     const givenDate = new Date(date);
-    const timeDiff = Math.abs(today.getTime() - givenDate.getTime());
-    return Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
-  }
+    const day = givenDate.getDay();
+    const month = givenDate.getMonth();
+    const year = givenDate.getFullYear();
+    const hours = givenDate.getHours();
+    const minutes = givenDate.getMinutes();
+    return `${hours}:${minutes} - ${getMonthName(month)} ${addDaySufix(
+      day
+    )}, ${year}`;
+  };
 
   const escape = str => {
     const div = document.createElement('div');
@@ -31,25 +65,37 @@ $(document).ready(() => {
   const generateHTML = tweet => `
     <article class="tweets__new">
       <header class="tweets__new__hd">
-        <div class="tweets__new__hd__wrap">
-          <img src="${tweet.user.avatars.small}" />
-          <h2>${tweet.user.name}</h2>
+        <img src="${tweet.user.avatars.small}" alt="user profile"/>
+        <div class="tweets__new__hd__profile-name">
+          <h3>${tweet.user.name}</h3>
+          <h4>${tweet.user.handle}</h4>
         </div>
-        <p>${tweet.user.handle}</p>
       </header>
-      <main class="tweets__new__mn">
+      <main class="tweets__new__main-content">
         <p>
         ${escape(tweet.content.text)}
         </p>
+        <span class="date">
+        ${talkingCalendar(tweet.created_at)}
+        </span>
+        <hr/>
       </main>
       <footer class="tweets__new__ft">
-        <p>
-        ${calcDateDiff(tweet.created_at)} days ago
-        </p>
-        <div class="icons">
+        <div class="tweets__new__ft__stats">
+          <div class="Retweets">
+            <strong>0</strong> Retweets
+          </div>
+          <div class="likes">
+            <strong>0</strong> Likes
+          </div>
+        </div>
+        <div class="tweets__new__ft__icons">
           <i class="fas fa-flag"></i>
+          <span class="visuallyhidden">Flag</span>
           <i class="fas fa-retweet"></i>
+          <span class="visuallyhidden">Retweet</span>
           <i class="fas fa-heart"></i>
+          <span class="visuallyhidden">Heart</span>
         </div>
       </footer>
     </article>
