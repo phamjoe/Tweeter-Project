@@ -5,7 +5,7 @@ $(document).ready(() => {
   const formText = myForm.children('textarea');
   const counter = myForm.find('.counter');
   const errorMsg = myForm.parent().find('#error');
-  const tweets = document.querySelector('.tweets-wrapper');
+  const tweets = $('.tweets-wrapper');
   const composeTweet = $('.btn');
 
   // Hide textarea
@@ -112,12 +112,17 @@ $(document).ready(() => {
       url: '/tweets',
       success(res) {
         const html = res.map(generateHTML).join('');
-        tweets.innerHTML = html;
+        tweets.append($(html));
       },
     });
   };
 
   loadTweets();
+
+  const getNewTweet = tweet => {
+    const oneNewTweet = generateHTML(tweet);
+    tweets.append($(oneNewTweet));
+  };
 
   // add EventListener on submission
   myForm.submit(function(e) {
@@ -131,11 +136,11 @@ $(document).ready(() => {
         type: 'post',
         url: '/tweets',
         data: serializeData,
-      }).then(() => {
-        // Reset the form
-        formText.val('');
-        counter.html(140);
-        loadTweets();
+        success(data) {
+          formText.val('');
+          counter.html(140);
+          getNewTweet(data);
+        },
       });
     } else {
       errorMsg.slideDown();
