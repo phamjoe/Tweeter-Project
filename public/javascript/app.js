@@ -48,7 +48,7 @@ $(document).ready(() => {
 
   const talkingCalendar = date => {
     const givenDate = new Date(date);
-    const day = givenDate.getDay();
+    const day = givenDate.getDate();
     const month = givenDate.getMonth();
     const year = givenDate.getFullYear();
     const hours = givenDate.getHours();
@@ -56,6 +56,7 @@ $(document).ready(() => {
       givenDate.getMinutes() < 10
         ? `0${givenDate.getMinutes()}`
         : givenDate.getMinutes();
+    console.log('minutes:', minutes);
     return `${hours}:${minutes} - ${getMonthName(month)} ${addDaySufix(
       day
     )}, ${year}`;
