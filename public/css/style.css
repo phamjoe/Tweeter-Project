@@ -626,4 +626,47 @@ h2 {
 .tweets__new:hover .tweets__new__ft .tweets__new__ft__icons {
   color: green;
 }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .tweets__new {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .tweets__new__main-content p {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .tweets__new {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .tweets__new__main-content p {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+  }
+  .tweets__new {
+    font-size: 13px;
+    font-size: 1.3rem;
+  }
+  .tweets__new__main-content span {
+    font-size: 10px;
+    font-size: 1rem;
+  }
+  .tweets__new__main-content p {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,41 @@
-// @media (max-width: 1150px) {
-//   .header__nav {
-//     ul.header__nav__menu {
-//       display: none;
-//     }
-//     &__hamburger--label {
-//       display: block;
-//     }
-//   }
-// }
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .tweets__new  {
+    &__main-content {
+      p {
+        @include fontSize(20);
+      }
+    }
+    @include fontSize(20);
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .tweets__new  {
+    &__main-content {
+      p {
+        @include fontSize(12);
+      }
+    }
+    @include fontSize(12);
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+  }
+  .tweets__new  {
+    &__main-content {
+      span {
+        @include fontSize(10);
+      }
+      p {
+        @include fontSize(15);
+      }
+    }
+    @include fontSize(13);
+  }
+}
