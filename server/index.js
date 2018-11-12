@@ -13,7 +13,7 @@ app.use(express.static('public'));
 const { MongoClient } = require('mongodb');
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || ' mongodb://localhost:27017/tweets';
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/tweets';
 
 MongoClient.connect(
   MONGODB_URI,
