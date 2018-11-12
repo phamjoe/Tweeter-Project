@@ -56,7 +56,6 @@ $(document).ready(() => {
       givenDate.getMinutes() < 10
         ? `0${givenDate.getMinutes()}`
         : givenDate.getMinutes();
-    console.log('minutes:', minutes);
     return `${hours}:${minutes} - ${getMonthName(month)} ${addDaySufix(
       day
     )}, ${year}`;
